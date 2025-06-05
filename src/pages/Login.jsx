@@ -1,26 +1,24 @@
-import '../styles/Login.css';
 
 function Login() {
   return (
-    <div className="signin cf">
-      <div className="avatar"></div>
-      <form>
-        <div className="inputrow">
-          <input type="text" id="name" placeholder="Usuario" />
-          <label className="ion-person" htmlFor="name"></label>
+
+    <form class="max-w-sm mx-auto mt-28">
+      <div class="mb-5">
+        <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Usuario</label>
+        <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+      </div>
+      <div class="mb-5">
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña</label>
+        <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ingresa tu contraseña" required />
+      </div>
+      <div class="flex items-start mb-5">
+        <div class="flex items-center h-5">
+          <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
         </div>
-
-        <div className="inputrow">
-          <input type="password" id="pass" placeholder="Contraseña" />
-          <label className="ion-locked" htmlFor="pass"></label>
-        </div>
-
-        <input type="checkbox" name="remember" id="remember" />
-        <label htmlFor="remember" className="radio"> Guardar sesión </label>
-
-        <input type="submit" value="Ingresar" />
-      </form>
-    </div>
+        <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Recordar</label>
+      </div>
+      <button type="submit" class="ml-74 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ingresar</button>
+    </form>
   );
 }
 
