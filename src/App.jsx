@@ -1,16 +1,23 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
+import AppLayout from "./layouts/AppLayout";
+import Assignments from "./pages/admin/Assignments";
 
 function App() {
   return (
-    <div>
-      {/* <Navbar /> */}
-      <Routes>
-        <Route path="/"element={<Login/>}/>
-        <Route path="/login" element={<Login />} />
-        {/* Add other routes here as needed */}
-      </Routes>
-    </div>
+    <Routes path="/">
+      {/* Rutas públicas */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
+      {/* Rutas protegidas o con layout */}
+      <Route element={<AppLayout />}>
+        <Route path="/admin" element={<Assignments />} />
+        {/* Puedes agregar más rutas aquí bajo el layout */}
+      </Route>
+    </Routes>
+
   );
 }
 
